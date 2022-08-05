@@ -1,3 +1,5 @@
+//Filtre e retorne todos os itens pares de um array
+
 const myArray = [22, 33, 44, 7, 55, 66, 30, 8]
 
 function filtrarPares(array){
