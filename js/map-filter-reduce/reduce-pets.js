@@ -26,10 +26,9 @@ const pets = [
 ]
 
 const totalWeight = pets.reduce((total, pet) => {
-    return {
-        totalAge: total.totalAge + pet.age,
-        totalWeight: total.totalWeight + pet.weight
-    }
-}, { totalAge: 0, totalWeight: 0 })
+    if(pet.type !== 'dog') return total
+
+    return total + pet.weight
+}, 0)
 
 console.log(totalWeight)
