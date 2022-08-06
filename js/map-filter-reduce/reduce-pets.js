@@ -6,6 +6,12 @@ const pets = [
         weight: 5
     },
     {
+        name: 'osvaldo',
+        type: 'dog',
+        age: 11,
+        weight: 6
+    },
+    {
         name: 'frajola',
         type: 'cat',
         age: 3,
@@ -25,10 +31,18 @@ const pets = [
     },
 ]
 
-const totalWeight = pets.reduce((total, pet) => {
-    if(pet.type !== 'dog') return total
+// const totalWeight = pets.reduce((total, pet) => {
+//     if(pet.type !== 'dog') return total
 
-    return total + pet.weight
-}, 0)
+//     return total + pet.weight
+// }, 0)
 
-console.log(totalWeight)
+// console.log(totalWeight)
+
+const totalWeightDogs = pets
+    .filter((pet) => pet.type === 'dog')
+    .reduce((total, dog) => {
+        return total + dog.weight
+    }, 0)
+
+console.log(totalWeightDogs)
