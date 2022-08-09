@@ -9,7 +9,7 @@ function tryCatchExemplo(string){
         verificarPalindromo(string) //verifica o código e se ele tiver algum tipo de erro ele sera tratado no catch
     }
     catch(e){
-        console.log(e) //trata o erro derivado da função
+        throw e //trata o erro derivado da função
     }
 }
 
