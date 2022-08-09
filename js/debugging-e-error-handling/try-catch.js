@@ -11,6 +11,9 @@ function tryCatchExemplo(string){
     catch(e){
         throw e //trata o erro derivado da função
     }
+    finally{
+        console.log(`A string enviada foi: ${string}`)
+    }
 }
 
 tryCatchExemplo('')
