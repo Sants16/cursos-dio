@@ -6,10 +6,15 @@ async function resolvePromise() {
         }, 3000)
     })
 
-    const resolved = await myPromise
-        .then((result) => `${result} passando pelo then`)
-        .then((result) => `${result} e agora acabou`)
-        .catch((err) => console.log(err.message))
+    let result
 
-    return resolved
+    try{
+        result = await myPromise
+            .then((result) => `${result} passando pelo then`)
+            .then((result) => `${result} e agora acabou`)
+    } catch(err) {
+        result = err.message
+    }
+
+    return result
 }
