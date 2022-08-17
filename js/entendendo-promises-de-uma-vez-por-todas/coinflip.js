@@ -1,8 +1,13 @@
 const coinFlip = new Promise((resolve, reject) => Math.random() > 0.5 ? resolve('Resolvido') : reject('Rejeitado'))
 // definimos que a Promise será tratada como resolvida (resolve) quando o número gerado for maior que 0.5 nessas condições a Promise irá retornar a string 'Resolvido', caso o número gerado seja menor que 0.5 a Promise será tratada como rejeitada (reject) e irá retornar a string 'Rejeitado'
 
-coinFlip.then(data => console.log('Primeiro then'))
-    .catch(() => console.log('Primeiro catch')) //so sera executado se o primeiro then der erro
-    .then(() => { throw new Error() })
-    .catch((err) => console.error('Erro pego do segundo then')) //so sera executado se o segundo then der erro
-    .then(() => console.log('Fim')) //vai ser executado sempre pois o catch não para a execução do código
+// se a promise for resolvida esse bloco de código será executado:
+coinFlip
+    .then(data => console.log('Then foi executado'))
+    .then(() => console.log('Resultado'))
+    .then(() => console.log('Fim'))
+
+// se a promise for rejeitada esse bloco de código será executado:
+coinFlip
+    .catch(() => { throw new Error('O catch foi executado') })
+    .catch((err) => console.error('O erro foi pego'))
