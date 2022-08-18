@@ -1,13 +1,11 @@
-const coinFlip = new Promise((resolve, reject) => Math.random() > 0.5 ? resolve('Resolvido') : reject('Rejeitado'))
-// definimos que a Promise será tratada como resolvida (resolve) quando o número gerado for maior que 0.5 nessas condições a Promise irá retornar a string 'Resolvido', caso o número gerado seja menor que 0.5 a Promise será tratada como rejeitada (reject) e irá retornar a string 'Rejeitado'
+const coinFlip = (n) => new Promise((resolve, reject) => n > 0 ? resolve('Resolvido') /*true*/ : reject('Rejeitado') /*false*/)
 
-// se a promise for resolvida esse bloco de código será executado:
-coinFlip
-    .then(data => console.log('Then foi executado'))
-    .then(() => console.log('Resultado'))
-    .then(() => console.log('Fim'))
+console.log('Begin')
 
-// se a promise for rejeitada esse bloco de código será executado:
-coinFlip
-    .catch(() => { throw new Error('O catch foi executado') })
-    .catch((err) => console.error('O erro foi pego'))
+const promiseArray = []
+for(let i = 0; i <= 4; i++) promiseArray[i] = coinFlip(Math.random()) //para cada promise sera gerado um novo numero aleatorio
+
+//esse bloco de codigo so sera executado se todas as promises forem resolvidas:
+Promise.all(promiseArray).then(console.log).then(() => console.log('End')) //faz a mesma coisa com todas as promises, porém se uma delas for rejeitado será retornado um throw em algum erro
+
+//Colocando o n > 0 todas as promises sempre serão resolvidas mas caso coloquemos n > 0.5 como era anteriormente podemos ver que quando uma das promises for rejeitada o código para de ser executado
