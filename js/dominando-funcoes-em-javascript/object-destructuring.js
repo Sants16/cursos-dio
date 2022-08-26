@@ -8,7 +8,7 @@ const musica = {
         duracao: 2.15
     },
     album: {
-        nome: 'Roundabout',
+        nome: 'RoundAbout',
         ranking: 3
     }
 }
@@ -22,7 +22,7 @@ function infoMusc({musica: {nome, duracao}}){
 }
 
 function infoAlbum({album: {nome: nomeAlbum, ranking: rankingAlbum}}){
-    console.log(`Essa música é do álbum ${nomeAlbum} que está no ${rankingAlbum}° dos álbuns mais ouvidos`)
+    console.log(`Essa música é do álbum ${nomeAlbum} que está no ${rankingAlbum}° lugar dos álbuns mais ouvidos`)
 }
 
 mostrarCantor(musica)
