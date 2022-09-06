@@ -1,0 +1,18 @@
+Programas são "objetos" que possume uma série de propriedades.
+PILARES:
+- Herança
+- Polimorfismo
+- Encapsulamento
+- Abstração
+
+ABSTRAÇÂO
+"Consiste em isolar um aspecto determinado de um estado de coisas relativamente complexo, a fim de simplificar a sua avaliação, classificação ou para permitir a comunicação do mesmo"
+
+HERANÇA
+"O objeto filho herda propriedades e métodos do objeto pai"
+
+ENCAPSULAMENTO
+"Cada classe tem propriedades e métodos independentes do restante do código"
+
+POLIMORFISMO
+"Objetos podem herdar a mesma classe pai, mas se comportarem de forma diferente quando invocamos seus métodos"
