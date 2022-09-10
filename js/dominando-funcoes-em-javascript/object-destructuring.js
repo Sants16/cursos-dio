@@ -28,3 +28,21 @@ function infoAlbum({album: {nome: nomeAlbum, ranking: rankingAlbum}}){
 mostrarCantor(musica)
 infoMusc(musica)
 infoAlbum(musica)
+
+const pessoa = {
+    nome: 'João',
+    idade: 17,
+    nacionalidade: 'Brasileiro'
+}
+
+function mostrarInfosPessoa({nome, idade, nacionalidade}){
+    nomePessoa(nome)
+    idadePessoa(idade)
+    nacionalidadePessoa(nacionalidade)
+}
+
+const nomePessoa = nome => console.log(nome)
+const idadePessoa = idade => console.log(idade)
+const nacionalidadePessoa = nacionalidade => console.log(nacionalidade)
+
+mostrarInfosPessoa(pessoa)

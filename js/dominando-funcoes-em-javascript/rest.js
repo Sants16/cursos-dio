@@ -2,7 +2,7 @@
 //o que era um elemento independente se torna parte de um array
 
 function itensCesta(...cesta){
-    console.log(`Sua cesta possue ${cesta.length} ${cesta.length >= 2 ? 'itens' : 'item'}`)
+    console.log(`Sua cesta possue ${cesta.length} ${cesta.length >= 2 ? 'itens' : 'item'}: ${cesta}`)
 }
 
 itensCesta('alface', 'maça', 'banana') //3 itens
