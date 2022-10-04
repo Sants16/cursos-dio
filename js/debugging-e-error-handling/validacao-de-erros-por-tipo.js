@@ -42,4 +42,4 @@ function validaArray(arr, num){
     }
 }
 
-console.log(validaArray([1, 2, 3, 4], 4 ))
+console.log(validaArray([1, 2, 3, 4], 4))
