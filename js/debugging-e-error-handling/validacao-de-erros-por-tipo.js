@@ -36,10 +36,10 @@ function validaArray(arr, num){
             console.log(e.stack)
             console.log(e.message)
         } else {
-            console.log('Tipo de erro não esperado:' + e)
+            console.log('Tipo de erro não esperado: ' + e)
         }
         
     }
 }
 
-console.log(validaArray([1, 2, 3, 4], 4))
+console.log(validaArray([1, 2, 3, 4], 2))
