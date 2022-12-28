@@ -1,6 +1,6 @@
-const items = ['a', 'b', 'c', 'd']
+const items = ['a', 'b', 'c', 'd'];
 
-;(async function() {
+(async function() {
     const promiseFunction = async (element) => {
         return new Promise((resolve, reject) => {
             return resolve(`${element} - promise`)

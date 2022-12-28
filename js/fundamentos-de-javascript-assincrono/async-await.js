@@ -9,12 +9,10 @@ async function resolvePromise() {
     let result
 
     try{
-        result = await myPromise
+       result = await myPromise
             .then((result) => `${result} passando pelo then`)
             .then((result) => `${result} e agora acabou`)
     } catch(err) {
         result = err.message
     }
-
-    return result
 }

@@ -7,8 +7,8 @@ const myPromise = new Promise((resolve, reject) => {
 })
 
 //MANIPULAÇÃO
-await myPromise //.then() é o que fazemos depois da promise ser resolvida
-            .then((result) => `${result} passando pelo then`)
+await myPromise
+            .then((result) => `${result} passando pelo then`) //.then() é o que fazemos depois da promise ser resolvida
             .then((result) => `${result} e agora acabou!`)
             .catch((err) => console.log(err.message))
 //Após 2 segundos, irá retorna "Resolvida passando pelo then e agora acabou"
